@@ -32,35 +32,9 @@ android {
     signingConfigs {
         create("release") {
             storeFile = file("release.jks")
-            storePassword = "package com.example.gemini
-
-import android.app.Application
-
-class AntiGemApplication : Application() {
-    override fun onCreate() {
-        super.onCreate()
-        // Personal build (own signing key): telemetry is disabled and the
-        // in-app auto-update check is off. TelemetryDeck would report to the
-        // original developer, and the stock updater would offer the original
-        // developer's releases, which cannot install over this build's
-        // signature anyway. Everything else is unchanged.
-    }
-}"
+            storePassword = "aUfh8g2fYSfwPBvuclIF"
             keyAlias = "antigem"
-            keyPassword = "package com.example.gemini
-
-import android.app.Application
-
-class AntiGemApplication : Application() {
-    override fun onCreate() {
-        super.onCreate()
-        // Personal build (own signing key): telemetry is disabled and the
-        // in-app auto-update check is off. TelemetryDeck would report to the
-        // original developer, and the stock updater would offer the original
-        // developer's releases, which cannot install over this build's
-        // signature anyway. Everything else is unchanged.
-    }
-}"
+            keyPassword = "aUfh8g2fYSfwPBvuclIF"
         }
     }
 
